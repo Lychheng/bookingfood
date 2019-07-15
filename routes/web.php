@@ -14,6 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin/', function () {
-    return 'Hello World';
-});
+Auth::routes();
+
+Route::get('/admin/create', 'productController@create');
+Route::get('/admin', 'productController@index');
+Route::post('/admin/create', 'productController@store')->name('uploadProduct');
+
+Route::get('/admin/showorder', 'productController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/admin/productview', 'productController@showProduct');
+
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->time('time');
             $table->string('comment');
             $table->timestamps();
-            $table->foreign('uid')->references('uid')->on('users');
+            $table->foreign('uid')->references('id')->on('users');
         });
     }
 
