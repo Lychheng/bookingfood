@@ -28,5 +28,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/productview', 'productController@showProduct');
 
+Route::get('/admin/orderview','orderController@showOrder');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
